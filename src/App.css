@@ -14,8 +14,8 @@
 }
 
 .App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+  background-color: #0f0f0f;
+  min-height: 10vh;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -25,9 +25,52 @@
 }
 
 .App-link {
-  color: #61dafb;
+  /* Preserve compatibility with existing .App-link usage but make it inherit the button look */
+  display: inline-block;
+  text-decoration: none;
+  color: inherit;
+  margin: 0.25rem 0.25rem; /* small spacing when .App-link is used */
 }
 
+/* Button-like link styles: anchors styled as compact buttons */
+a {
+  display: inline-block;
+  padding: 0.45rem 0.9rem;
+  background: #484e4e; /* primary button color */
+  color: #ffffff;
+  text-decoration: none;
+  margin: 0.25rem 0.35rem; /* spacing between button-like links */
+  border: 1px solid rgba(0,0,0,0.08);
+  border-radius: 8px;
+  box-shadow: 0 2px 0 rgba(0,0,0,0.06);
+  transition: background-color 150ms ease, transform 80ms ease, box-shadow 150ms ease;
+  font-weight: 600;
+  line-height: 1;
+}
+
+a:visited {
+  color: #ffffff; /* keep visited readable on button bg */
+  text-decoration: none;
+}
+
+a:hover,
+a:focus {
+  background: #1a1b1b; /* slightly darker */
+  transform: translateY(-1px);
+  text-decoration: none;
+  outline: none;
+  box-shadow: 0 6px 14px rgba(2,26,84,0.12);
+}
+
+a:focus {
+  /* visible focus ring for keyboard users */
+  box-shadow: 0 0 0 4px rgba(0,123,255,0.18);
+}
+
+a:active {
+  transform: translateY(0);
+  background: #a4c8ee;
+}
 @keyframes App-logo-spin {
   from {
     transform: rotate(0deg);
