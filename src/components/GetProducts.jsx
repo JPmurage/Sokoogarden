@@ -82,7 +82,7 @@ fetchproducts()
     <b  className='text-warning'>{product.product_cost}</b>
 
     <br />
-    <input type="button" value="Make Payment"className='btn btn-dark w-100 text-info' />
+    <input type="button" value="Purchase now"className='btn btn-dark w-100 text-info' onClick={()=>navigate("/mpesa",{state:{product}})}  />
 
 
 </div>
