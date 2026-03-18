@@ -3,7 +3,7 @@ import './App.css';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import {BrowserRouter as Router ,Routes,Route,Link} from 'react-router-dom';
 import { SignUp } from './components/SignUp';
-import { SignIn } from './components/SignIn';
+import {SignIn} from './components/SignIn';
 import MpesaPayment from './components/MpesaPayment';
 import GetProducts from './components/GetProducts';
 import AddProducts from './components/AddProducts';
@@ -12,7 +12,7 @@ function App() {
     
 
   return (
-    <Router>
+    <Router >
     <div className="App">
       <header className="App-header">
       <h1 className='text-warning'>Sokogarden-Buy and sell online</h1>
@@ -35,7 +35,7 @@ function App() {
 <Route path='/signup'   element={<SignUp/>} ></Route>
 <Route path='/signin'   element={<SignIn/>} ></Route>
 <Route path='/addproducts'   element={<AddProducts/>} ></Route>
-<Route path='/mpesapayment'   element={<MpesaPayment/>} ></Route>
+<Route path='/mpesa'   element={<MpesaPayment/>} ></Route>
 <Route path='/getproducts'   element={<GetProducts/>} ></Route>
 
 
